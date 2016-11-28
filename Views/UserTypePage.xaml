@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms" x:Class="BigBreakers.UserTypePage">
+	<ContentPage.Content>
+		<StackLayout>
+			<StackLayout Orientation="Vertical" VerticalOptions="Start">
+    			<Label Text="Félicitations !" HorizontalOptions="CenterAndExpand" Margin="0,70,0,20" TextColor="Gray"></Label>
+				<Label Text="Vous êtes maintenant membre de" HorizontalOptions="CenterAndExpand" TextColor="Gray"></Label>
+				<Image Source="FullLogo"></Image>
+				<Label Text="Vous êtes ?" TextColor="Gray" HorizontalOptions="CenterAndExpand" Margin="0,0,0,20"></Label>
+				<StackLayout HorizontalOptions="Center" Orientation="Horizontal" Spacing="50">
+					<controls:ImageButton x:Name="playerButton" BackgroundColor="Transparent" Image="PlayerEmptyButton"></controls:ImageButton>
+					<controls:ImageButton x:Name="cordeurButton" BackgroundColor="Transparent" Image="CordeurEmptyButton"></controls:ImageButton>
+				</StackLayout>
+  			</StackLayout>
+			<StackLayout Margin="0,0,0,30" Orientation="Vertical" VerticalOptions="EndAndExpand">
+					<Button IsEnabled="false" x:Name="confirmButton" BorderWidth="1" BorderColor="Gray" BorderRadius="5" Text="Confirmer" TextColor="Gray" Scale="1.1" HorizontalOptions="Center" WidthRequest="150"/>
+			</StackLayout>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="BigBreakers.EntryFormCell" x:Name="cell" xmlns:local="clr-namespace:BigBreakers;assembly=BigBreakers">
+	<ViewCell.View>
+		<StackLayout Orientation="Horizontal" BindingContext="{x:Reference cell}">
+                <Image Source="{Binding Image}" Margin="8"/>
+                <Label Text="{Binding Label}" TextColor="#DC1837" FontAttributes="Bold" VerticalOptions="Center" />
+                <local:EntryForm Text="{Binding Text}" Placeholder="{Binding PlaceHolder}" HorizontalOptions="FillAndExpand" TextColor="#503026" VerticalOptions="Center" Margin="0, 0, 8, 0"/>
+             </StackLayout>
+	</ViewCell.View>
+</ViewCell>

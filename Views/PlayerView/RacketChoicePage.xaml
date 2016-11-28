@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage Title="Ma Raquette" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="BigBreakers.RacketChoicePage">
+	<ContentPage.Content>
+		<StackLayout Margin="0,0,0,0" Orientation="Vertical">
+			<StackLayout Margin="30" Orientation="Horizontal" VerticalOptions="Start">
+    			<Image Source="defaultRacket"></Image>
+				<Label Margin="35" Text="Marque"></Label>
+  			</StackLayout>
+			<StackLayout Margin="0,30,0,0" Orientation="Vertical" >
+				<Picker x:Name="BrandPicker"  HorizontalOptions="FillAndExpand" Title="Selectioner la marque" HeightRequest="50"></Picker>
+				<Picker x:Name="ModelPicker" HorizontalOptions="FillAndExpand" Title="Selectionner votre modèle de raquette" HeightRequest="50" Margin="0,0,0,50"></Picker>
+				<Button x:Name="ConfirmButton" BorderRadius="0" BackgroundColor="#50E3C2" Text="CONFIRMER" TextColor="White"></Button>
+				<Button x:Name="skipButton" Text="Passer cette étape" TextColor="Gray" Scale="0.8" HorizontalOptions="Fill" BackgroundColor="Transparent" BorderColor="Transparent"></Button>
+			</StackLayout>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns:Controls="clr-namespace:Softweb.Controls;assembly=XAutocomplete" xmlns:autocomplete="clr-namespace:Syncfusion.SfAutoComplete.XForms;assembly=Syncfusion.SfAutoComplete.XForms" xmlns:maps="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="BigBreakers.MapPage">
+	<ContentPage.Content>
+	<AbsoluteLayout>
+				<maps:Map x:Name="mapView"
+					AbsoluteLayout.LayoutBounds="0,0,1,1"
+					AbsoluteLayout.LayoutFlags="All"
+				    IsShowingUser="true"/>
+			<Controls:AutoComplete FieldName="description" Text="{Binding SearchText, Mode=TwoWay}" Suggestions="{Binding Addresses, Mode=TwoWay}" Placeholder="Lieu de dépose" x:Name="Test" WidthRequest="150" Margin="0,30,0,0" BackgroundColor="White" AbsoluteLayout.LayoutBounds=".5,0,.8,.12" SearchCommand="{Binding AutocompleteSearchCommand}" SelectedCommand="{Binding SelectedSearchitem}" AbsoluteLayout.LayoutFlags="All">
+				<Controls:AutoComplete.SuggestionItemDataTemplate>
+                        <DataTemplate>
+                            <ViewCell> 
+                                <ViewCell.View>
+                                    <StackLayout VerticalOptions="Fill" Spacing="0">
+                                        <StackLayout Padding="5,0,0,0" Orientation="Horizontal" VerticalOptions="CenterAndExpand">
+                                             <Label Text="{Binding description}" TextColor="Black" />
+                                        </StackLayout>                                  
+                                    </StackLayout>
+                                </ViewCell.View>
+                            </ViewCell>
+                        </DataTemplate>
+                    </Controls:AutoComplete.SuggestionItemDataTemplate>
+			</Controls:AutoComplete>
+			<StackLayout Orientation="Vertical" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds=".5,.45">
+				<Button Command="{Binding OrderCommand}" BorderWidth="1" HeightRequest="20" BorderColor="Gray" BorderRadius="10" TextColor="Black" WidthRequest="200" BackgroundColor="White" Text="Demander un cordeur ici"></Button>
+				<Image x:Name="FixPin" Source="PinLocationImage.png"/>
+			</StackLayout>
+		</AbsoluteLayout>
+	</ContentPage.Content>
+</ContentPage>

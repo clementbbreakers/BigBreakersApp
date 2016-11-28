@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="BigBreakers.PhoneNumberCodePage" Title="Confirmation Numéro">
+	<ContentPage.Content>
+		<StackLayout>
+  			<StackLayout Margin="0,30,0,0" Orientation="Vertical" VerticalOptions="Start">
+				<Image HorizontalOptions="CenterAndExpand" Source="phone.png" Margin="0,0,0,40"></Image>
+				<Label Margin="0,0,0,70" HorizontalOptions="CenterAndExpand" WidthRequest="300" FontSize="14" TextColor="Gray" Text="Un SMS contenant un code a 4 chiffres à été envoyé sur le numéro de téléphone"></Label>
+				<Entry Keyboard="Telephone" x:Name="entryCode" Text="{Binding code}" Placeholder="Code de vérification" HorizontalOptions="Center" WidthRequest="300" HeightRequest="35" Margin="0,0,0,50"></Entry>
+				<Button Command = "{Binding confirmCommand}" BorderRadius="0" BackgroundColor="#50E3C2" Text="CONFIRMER" TextColor="White"></Button>
+    		<!-- top controls -->
+  			</StackLayout>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

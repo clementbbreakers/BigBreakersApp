@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="BigBreakers.SignupPage" Title="Inscription">
+	<ContentPage.Content>
+		<ScrollView>
+		<StackLayout>
+				<!-- middle controls -->
+				<StackLayout Spacing="5" HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+					<Entry x:Name="firstname" Placeholder="Prénom" Text="{Binding firstName}" HorizontalOptions="FillAndExpand" WidthRequest="250"></Entry>
+					<Entry x:Name="lastname" Placeholder="Nom" Text="{Binding lastName}" HorizontalOptions="FillAndExpand" WidthRequest="250"></Entry>
+					<Entry x:Name="email" Placeholder="Email" Text="{Binding email}" Keyboard="Email" HorizontalOptions="FillAndExpand" WidthRequest="250"></Entry>
+					<Entry x:Name="password" Placeholder="Mot de passe" Text="{Binding password}" IsPassword="true" HorizontalOptions="FillAndExpand" WidthRequest="250"></Entry>
+					<Entry x:Name="confirmPassword" Placeholder="Confirmation" Text="{Binding confirmPassword}" IsPassword="true" HorizontalOptions="FillAndExpand" WidthRequest="250"></Entry>
+					<Entry x:Name="phoneNumber" Placeholder="Téléphone" Text="{Binding phoneNumber}" Keyboard="Telephone" HorizontalOptions="FillAndExpand" WidthRequest="250"></Entry>
+				</StackLayout>
+				<!-- bottom controls -->
+				<StackLayout Margin="0,0,0,30" Spacing="-10" VerticalOptions="End">
+					<Button Text="Conditions Générales" Scale="0.7" TextColor="Gray"></Button>
+					<Button x:Name="signupButton" Command="{Binding SignupCommand}" BorderWidth="1" BorderColor="Gray" BorderRadius="5" Text="S'inscrire" TextColor="Gray" Scale="1.1" HorizontalOptions="Center" WidthRequest="150">	
+					</Button>
+				</StackLayout>
+		</StackLayout>
+		</ScrollView>
+	</ContentPage.Content>
+</ContentPage>

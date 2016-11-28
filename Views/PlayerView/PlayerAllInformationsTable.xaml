@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage Title="Profil" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="BigBreakers.PlayerAllInformationsTable">
+	<ContentPage.Content>
+		<TableView Intent="Form">
+            <TableRoot>
+                <TableSection>
+                    <TextCell x:Name="personalInfos" Text="Mes informations personnelles"></TextCell>
+					<TextCell Text="Ma raquette"></TextCell>
+					<TextCell Text="Mon cordage"></TextCell>
+                </TableSection>
+            </TableRoot>
+        </TableView>
+	</ContentPage.Content>
+</ContentPage>

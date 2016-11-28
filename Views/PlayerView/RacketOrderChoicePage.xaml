@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="BigBreakers.RacketOrderChoicePage">
+	<ContentPage.Content>
+		<ListView x:Name="RacketList" ItemsSource="{Binding Rackets}">
+			<ListView.ItemTemplate>
+      			<DataTemplate>
+        			<ImageCell Text="{Binding brand.name}" Detail="{Binding model}" ImageSource="defaultRacket.png" />
+      			</DataTemplate>
+    		</ListView.ItemTemplate>
+		</ListView>
+	</ContentPage.Content>
+</ContentPage>
